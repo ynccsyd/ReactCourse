@@ -31,3 +31,14 @@ function App() {
     );
 }
 export default App;
+
+// Koşullu render fonk
+
+{
+    friends ? <div>var</div> : <div>yok</div>
+}
+
+// yukarıdaki fonk ile aynı işi yapar
+
+{friends && <div>var</div>}
+{!friends && <div>yok</div>}
