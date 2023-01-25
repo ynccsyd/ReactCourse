@@ -48,7 +48,7 @@ String(Symbol('my symbol')) // 'Symbol(my symbol)'
 
 Boolean(2) // explicit
 var a=!!2 //explicit
-if (2) { ... } // implicit due to logical context
+if (2) { somethng } // implicit due to logical context
 !!2 // implicit due to logical operator
 2 || 'hello' // implicit due to logical operator
 // Boolean tiplerle uğraşırken truthy, falsy değerler işin içine girerler. Kısaca açıklayacak olursak javascriptin kendi doğası gereği true veya false dönen değerler mevcuttur. Bunlar;
