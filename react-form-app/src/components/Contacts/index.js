@@ -1,9 +1,22 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import List from "./List"
 import Form from "./Form"
 
-const Contacts = () => {
-  const[contacts, setContacts]=useState([]);
+function Contacts() {
+  const [contacts, setContacts] = useState([
+    {
+      fullname:"Ali",
+      phone_number:"1236"
+    },
+    {
+      fullname:"Veli",
+      phone_number:"6321"
+    },
+    {
+      fullname:"Ayşe",
+      phone_number:"7989"
+    }
+  ]);
 
   useEffect(() => {
     console.log(contacts);
@@ -11,8 +24,8 @@ const Contacts = () => {
 
   return (
     <div>
-    <List/>
-    <Form addContact={setContacts} contacts={contacts} />
+      <List contacts={contacts} />
+      <Form addContact={setContacts} contacts={contacts} />
     </div>
   )
 }
