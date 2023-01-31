@@ -53,7 +53,6 @@
 // }
 //     getData();
 
-
 const getUsers = () => {
     return new Promise(async (resolve, reject) => {
         const { data } = await axios(" https://jsonplaceholder.typicode.com/users ");
