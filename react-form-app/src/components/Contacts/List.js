@@ -19,7 +19,7 @@ function List({ contacts }) {
         placeholder='Filter Contact'
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)} />
-      <ul>
+      <ul className='list'>
         {filtered.map((contact, i) => (
           <li key={i}>
             {contact.fullname}
