@@ -2,8 +2,15 @@
 ## 📝 $\textcolor{gray}{Let's\ Create\ a\ Telephone\ Directory:}$ 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :dart: $\textcolor{gray}{In\ this\ project\ you\ have\ to\ know:}$ 
 
-## Available Scripts
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="Git" **alt="Git" width="40" height="40"/> 
+<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+   <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="Git" **alt="Git" width="40" height="40"/>   
+ </div>
+
+## :dart: $\textcolor{gray}{Available\ Scripts}$  
 
 In the project directory, you can run:
 
