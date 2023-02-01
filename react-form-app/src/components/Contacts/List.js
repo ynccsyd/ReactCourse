@@ -16,7 +16,7 @@ function List({ contacts }) {
   return (
     <div>
       <input
-        placeholder='Filter Contact'
+        placeholder='Filter by name/number'
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)} />
       <ul className='list'>
