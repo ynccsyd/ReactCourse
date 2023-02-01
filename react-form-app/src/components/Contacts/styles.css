@@ -1,0 +1,11 @@
+#container{
+    width: 408px;
+    background-color: aliceblue;
+    padding: 20px;
+}
+input{
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing: border-box;
+}
