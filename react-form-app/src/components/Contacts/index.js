@@ -6,16 +6,16 @@ import "./styles.css"
 function Contacts() {
   const [contacts, setContacts] = useState([
     {
-      fullname:"Ali",
-      phone_number:"1236"
+      fullname: "Ali",
+      phone_number: "1236"
     },
     {
-      fullname:"Veli",
-      phone_number:"6321"
+      fullname: "Veli",
+      phone_number: "6321"
     },
     {
-      fullname:"Ayşe",
-      phone_number:"7989"
+      fullname: "Ayşe",
+      phone_number: "7989"
     }
   ]);
 
@@ -24,7 +24,9 @@ function Contacts() {
   }, [contacts]);
 
   return (
+
     <div id='container'>
+      <h1>Contacts</h1>
       <List contacts={contacts} />
       <Form addContact={setContacts} contacts={contacts} />
     </div>

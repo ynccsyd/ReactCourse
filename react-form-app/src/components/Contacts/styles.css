@@ -21,4 +21,12 @@ ul, li{
     background-color: antiquewhite;
     padding: 5px;
     margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    padding: 5px;
+}
+.btn>button{
+    padding: 5px;
 }
