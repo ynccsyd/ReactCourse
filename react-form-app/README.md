@@ -23,11 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 * You can add and filter by name or phone number.
  <p align="center">
     <img src="https://user-images.githubusercontent.com/109158340/216112853-280fe0fa-6d2e-46b9-841f-c3cee2a84de5.png">
-      
-
-      
-
-
+          
 
 
 ## Learn More
