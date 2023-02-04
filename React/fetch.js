@@ -1,11 +1,11 @@
-// // 5sn sonra merhaba yazar
+// // Say hello after 5 seconds
 // setTimeout(()=>{
-// console.log("Merhaba");
+// console.log("Merhaba(Hello)");
 // }, 5000);
 
-// // 1sn de bir merhaba.... yazar
+// // Writes  hello every 1 second.
 // setInterval(() => {
-// console.log("Merhaba ben her saniye çalişacağim.");
+// console.log("Hello, I will work every second.");
 //  }, 1000);
 
 // const sayHi = (cb)=>{
