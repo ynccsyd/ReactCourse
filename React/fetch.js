@@ -1,4 +1,4 @@
-// // 5sn sonra merhaba yazar
+// // write Hello every 1second
 // setTimeout(()=>{
 // console.log("Merhaba(Hello)");
 // }, 5000);
@@ -21,14 +21,14 @@
 // fetch(" https://jsonplaceholder.typicode.com/users ")
 //     .then((data) => data.json())
 //     .then((users) => {
-//         console.log("Users Yuklendi!", users);
+//         console.log("Users Uploaded!", users);
 //         fetch(" https://jsonplaceholder.typicode.com/posts/1 ")
 //             .then((data) => data.json())
 //             .then((post) => {
-//                 console.log("Post 1 Yüklendi!", post);
+//                 console.log("Post 1 Uploaded!", post);
 //                     fetch(" https://jsonplaceholder.typicode.com/posts/2 ")
 //                         .then((data) => data.json())
-//                         .then((data) => console.log("Post 2 Yüklendi", data));
+//                         .then((data) => console.log("Post 2 Uploaded", data));
 //         });
 // });
 
