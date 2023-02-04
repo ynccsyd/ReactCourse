@@ -38,18 +38,35 @@
     //// Bilgisayar tarafından 10 'a kadar tutulmuş olan rastgele sayıyı bulmayı deneyelim.
 
 
-//Girdiğimiz sayıyı aklında tutması için prompt değişkene atanır
+// //Girdiğimiz sayıyı aklında tutması için prompt değişkene atanır
 
-var randomSayi = Math.floor(Math.random() * 10);
-var tahmin=document.getElementById("random").value;
+// var randomSayi = Math.floor(Math.random() * 10);
+// var tahmin=document.getElementById("random").value;
 
-function findrandom(randomSayi, tahmin) {
+// function findrandom(randomSayi, tahmin) {
 
-    if (tahmin == randomSayi && tahmin != null) alert("Bildin!!!");
-    else if (tahmin == "") alert("Boş giriş yaptınız!");
-    else if (tahmin == null) alert("Giriş yapmaktan vazgeçtiniz!");
-    else {
-        alert("Bir daha denee :(, Random sayi: " + randomSayi);
-    }
+//     if (tahmin == randomSayi && tahmin != null) alert("Bildin!!!");
+//     else if (tahmin == "") alert("Boş giriş yaptınız!");
+//     else if (tahmin == null) alert("Giriş yapmaktan vazgeçtiniz!");
+//     else {
+//         alert("Bir daha denee :(, Random sayi: " + randomSayi);
+//     }
 
-}
+// }
+
+var weight=prompt("Kilonuzu giriniz:")
+var height=prompt("Boyunuzu giriniz:")
+
+
+function vkiHesapla(weight, height) {
+    var vki = weight / (height * height)
+    //vki = kg/(m * m)
+//metre cinsinden örnek 1.66 
+    if (vki < 18.5) return alert(`Vücut kitle indeksiniz: ${vki}, değerleriniz düşüktür`);
+    if (vki >= 18.5 && vki <= 24.9) return alert(`Vücut kitle indeksiniz: ${vki}, normal değerdesiniz`);
+    if (vki >= 25.0 && vki <= 29.9) return alert(`Vücut kitle indeksiniz: ${vki}, kilolusunuz`);
+    if (vki >= 30) return alert(`Vücut kitle indeksiniz: ${vki}, aşırı kilolusunuz`);
+    return alert("Girdiğiniz değerleri kontrol ediniz");
+};
+
+vkiHesapla(weight,height)
