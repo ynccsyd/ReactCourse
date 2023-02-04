@@ -81,7 +81,7 @@ const getPost = (post_id) => {
 })();
 
 
-// birden fazla varsa sıralamaya yarar
+// If there is more than one, it enables to sort
 Promise.all([getUsers(), getPost(1)])
 .then(console.log) 
 .catch(console.log);
