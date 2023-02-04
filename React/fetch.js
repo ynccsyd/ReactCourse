@@ -1,4 +1,4 @@
-// // 5sn sonra merhaba yazar
+// //Say hello after 5 seconds
 // setTimeout(()=>{
 // console.log("Merhaba");
 // }, 5000);
