@@ -1,9 +1,11 @@
-// // write Hello every 1second
+// // Write Hello after 5 seconds
+// 5sn sonra Merhaba yazar.
 // setTimeout(()=>{
 // console.log("Merhaba(Hello)");
 // }, 5000);
 
 // // Writes  hello every 1 second.
+// Her sn Merhaba yazar.
 // setInterval(() => {
 // console.log("Hello, I will work every second.");
 //  }, 1000);
@@ -82,6 +84,8 @@ const getPost = (post_id) => {
 
 
 // If there is more than one, it enables to sort
+//Birden fazla varsa sıralamaya yarar
+
 Promise.all([getUsers(), getPost(1)])
 .then(console.log) 
 .catch(console.log);
