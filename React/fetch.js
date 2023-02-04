@@ -1,4 +1,4 @@
-// // Say hello after 5 seconds
+// // 5sn sonra merhaba yazar
 // setTimeout(()=>{
 // console.log("Merhaba(Hello)");
 // }, 5000);
@@ -52,7 +52,6 @@
 //     console.log("post2", post2);
 // }
 //     getData();
-
 
 const getUsers = () => {
     return new Promise(async (resolve, reject) => {
