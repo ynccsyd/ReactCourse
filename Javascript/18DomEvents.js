@@ -9,7 +9,6 @@ function doclick() {
     this.style.color == "red" ? this.style.color = "black" : this.style.color = "red"
 }
 
-
 //***Event Listener ile Çalışmak***
 //Event oluşumu öncelikle nesnenin seçimi ile başlar. Bir butona tıklandığında tıklandı 
 //uyarısı ekrana uyarı(alert) olarak ekrana yazdırabiliriz.
