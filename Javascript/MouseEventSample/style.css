@@ -1,0 +1,41 @@
+body{
+    background-color:#dedede;
+  }
+  #text{
+        display: flex;
+        justify-content: center;
+        color:orange;
+  }
+  
+  form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  }
+  
+  #l1{
+        position: absolute;
+        transform:translate(-70%,-40%);
+  }
+  
+  #l2{
+        position: absolute;
+        transform: translate(-72%,250%);  
+  }
+  
+  .btn{
+       display: flex;
+       flex-direction: column;
+       align-items: center; 
+  }
+  #button{
+    
+       width:100px;
+       position: relative;
+       transform: translate(0%,90%);
+       color: blue;
+  }
+  
+  p{
+    height: 50px;;
+  }
