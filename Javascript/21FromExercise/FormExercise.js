@@ -10,11 +10,12 @@ userFormDOM.addEventListener('submit', formHandler)
 
 function formHandler(event) {
     event.preventDefault()
+    const USER_NAME = document.querySelector("#username")
+    const SCORE = document.querySelector("#score")
 }
-// const USER_NAME = document.querySelector("#username")
-// const SCORE = document.querySelector("#score")
+
 // if (USER_NAME.value && SCORE.value) {
-// addItem(USER_NAME.value, SCORE. value) // gonderdikten sonra sifirladik
+addItem(USER_NAME.value, SCORE. value) // gonderdikten sonra sifirladik
 // USER_NAME.value =
 // SCORE.value =
 // } else {
