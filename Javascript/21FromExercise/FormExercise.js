@@ -27,7 +27,10 @@ function formHandler(event) {
         USER_NAME.value = ""
         SCORE.value = ""
     } else {
-        alertDOM.innerHTML=alertFunction("başlık bilgisi","eksik bilgi girdiniz", "danger")
+        alertDOM.innerHTML=alertFunction(
+            "başlık bilgisi",
+            "eksik bilgi girdiniz", 
+            "danger")
         console.log("hatali giris")
     }
 }
@@ -48,8 +51,4 @@ const addItem = (userName, score) => {
 
 
 
-// USER_NAME.value =
-// SCORE.value =
-// } else {
-// console.log('hatali girls')
 
