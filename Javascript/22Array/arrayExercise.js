@@ -37,12 +37,13 @@ console.log(es6Items) // (4) [' lorem', Array(3), 5, Array(3)]
 
 // Iki Array Bilgisini Birlestirmek -> […ES6, ES6]
 let allUsers = [...femaleUsers, ...maleUsers] // es6 birden fazla array yapisini birlestirmek
-console. log(allUsers)
+console. log(allUsers) // ['Ayse', 'Hulya', 'Merve', 'Ahmet', 'Hasan', 'Mehmet']
+
 // Array icerisindeki bilgiyi String'e cevirmek -> toString, join
-console. log(allUsers.toString())
-console. log(allUsers.join(" --- "))
+console. log(allUsers.toString()) //Ayse,Hulya,Merve,Ahmet,Hasan,Mehmet
+console. log(allUsers.join(" --- ")) // Ayse --- Hulya --- Merve --- Ahmet --- Hasan --- Mehmet
 
 //-Istedigimiz Index Bilgisine Oge Eklemek -> splice(index, 0, value)
 allUsers.splice(allUsers.length -1, 0, "Melissa")
-allUsers.splice(Math.floor( allusers.length /_2 ), 8, "Lorem")
-console. log(allUsers)
+allUsers.splice(Math.floor( allUsers.length /2 ), 0, "Lorem")
+console. log(allUsers) // (8) ['Ayse', 'Hulya', 'Merve', 'Lorem', 'Ahmet', 'Hasan', 'Melissa', 'Mehmet']
