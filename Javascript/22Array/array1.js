@@ -15,7 +15,14 @@ console.log(
 // Array icindeki ilk elemanin cagirilmasi
 console.log(items[0])
 // Array icindeki son elemanin cagirilmasi
-console.log(items[items.length - 1])
+console.log(
+    "sondaki dizi elemanı:",
+    items[items.length - 1])
+// Array icindeki ortadaki elemanin cagirilmasi
+console.log(
+    "ortadaki dizi elemanı:",
+    items[Math.floor(items.length/2)]
+)
 // değişken içindeki bilginin Array olup olmadığının kontrol edilmesi
 console.log(
     typeof (items) // object olarak çıktı veriyor
