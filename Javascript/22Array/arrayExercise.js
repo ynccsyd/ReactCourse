@@ -59,3 +59,34 @@ const armutVar = alisverisListem.includes("armut");
 console.log(armutVar); // false
 
 //.concat() dizileri birleştirip tek bir diziye çevirmemizi sağlıyor.
+const yiyecekler = ["pasta", "baklava", "puding"];
+const icecekler = ["su", "kahve"];
+const menu = yiyecekler.concat(icecekler);
+console.log(menu); // ['pasta', 'baklava', 'puding', 'su', 'kahve']
+ 
+// forEach
+//  dizi.forEach(function(diziElemanınınKendisi, diziElemanınınIndeksi, dizininKendisi) {
+//     // Bir şeyler yap.
+//     }); 
+
+ // Malzemeler dizisindeki her bir malzemeyi ve onun indeksini konsola yazdıran bir kod yazalım:
+const malzemeler = ["yumurta", "un", "süt"];
+
+malzemeler.forEach(function(malzeme, malzemeIndeksi) {
+    console.log(malzeme, malzemeIndeksi);
+}); 
+// çıktı :
+// yumurta 0
+//  un 1
+//  süt 2
+
+/*.map() */
+//Map metodu da forEach gibi kendisine verilen fonksiyonu dizinin her elemanı için uygular 
+//fakat forEach'ten farklı olarak sonucu yeni bir dizide tutar. Orijinal dizi olduğu gibi kalır.
+// Bir dizideki sayıların 5 katından oluşan başka bir dizi oluşturalım:
+const sayilar = [1,2,3];
+let sayilarin5kati = sayilar.map(function(sayi) {
+    return sayi*5;
+});
+console.log(sayilarin5kati);
+console.log(sayilar);
