@@ -47,3 +47,15 @@ console. log(allUsers.join(" --- ")) // Ayse --- Hulya --- Merve --- Ahmet --- H
 allUsers.splice(allUsers.length -1, 0, "Melissa")
 allUsers.splice(Math.floor( allUsers.length /2 ), 0, "Lorem")
 console. log(allUsers) // (8) ['Ayse', 'Hulya', 'Merve', 'Lorem', 'Ahmet', 'Hasan', 'Melissa', 'Mehmet']
+
+
+// Includes metodu bir elemanın dizi içerisinde bulunup bulunmadığını kontrol eder. Boolean (true/false) olarak çıktı alınır.
+const alisverisListem = ["elma", "ekmek", "süt"];
+const elmaVar = alisverisListem.includes("elma");
+console.log(elmaVar); //true
+// Dizi içerisinde elma olduğu için true yazdırmasını bekleriz.
+
+const armutVar = alisverisListem.includes("armut");
+console.log(armutVar); // false
+
+//.concat() dizileri birleştirip tek bir diziye çevirmemizi sağlıyor.
