@@ -6,7 +6,7 @@ console.log (items)
 
  let emptyArray= [] // bos liste
 // Array içerisindeki eleman/öge sayısını öğrenmek
-// console. login
+console. login
 // items. length // array icimdeki oge sayisi
 // document.queryselector'#into').innerhtml-= items. length
 // Array icindeki ilk elemanin cagirilmasi
