@@ -21,3 +21,17 @@ for (; index < LOREM_LIST.length; index++) {
     LI_DOM.innerHTML = LOREM_LIST[index]
     UL_DOM.append(LI_DOM)
 } // lorem, ipsum yazar listeye:)
+
+
+// break dersek oraya kadar al continue dersek o hariç hepsini al demek
+
+//Etiketli Continue Örneği
+
+gec_etiketi: for (var i = 0; i <=5; i++) {
+    for (var j = 0; j <= 4; j++) {
+      if (j == 2) {
+        continue gec_etiketi;
+      }
+      console.log("iç döngüden j :" + j);
+    }
+   }
