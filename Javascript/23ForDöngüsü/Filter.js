@@ -47,3 +47,4 @@ console.log(buyukotuz)
 //Soru 2: Yukarıdaki diziyi kullanarak filter() metodu ile JavaScript bilen kişiyi getirin.
 const jsbilen=persons.filter(person=>person.languages=="JavaScript")
 console.log(jsbilen)
+
