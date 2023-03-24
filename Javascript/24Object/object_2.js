@@ -1,16 +1,31 @@
 // [key1:1, key1:2, key3:3,
-let laptop1 =
-brand: "Apple",
-model: "MacBook Pro",
-2kg": 2
-model Name: "Hackbook Pro",
-model-name: "Hackbook Pro",
-model_name: "Hackbook Pro"
-console. log(laptop1)
-console.log(laptop 1.brand, laptop 1["brand"])
-console. log(laptop 1.model, laptop 1["model"])
-console. log (laptop 1 ["2kg"1)
+let laptop1 = {
+    brand: "Apple",
+    model: "MacBook Pro",
+    "2kg": 2,
+    modelName: "Hackbook Pro",
+    model_name: "Hackbook Pro",
+}
+console.log(laptop1)
 // Dogru Anahtar Bilgisi Olusturmak
-// // Anahtar bilgisine yenideger eklemek
-// Anahtar Bilgilerine Ulasmak (keys) -> Object keys(item)
-/ Deger Bilgilerine Ulasmak (values) - Object values(item)
+console.log(laptop1.brand, laptop1["brand"])
+console.log(laptop1.model, laptop1["model"])
+console.log(laptop1["2kg"])
+
+// Anahtar bilgisine yeni deger eklemek
+laptop1.brand = "Mac"
+laptop1["brand"] = "Mac 1"
+console.log(laptop1)
+
+// Yeni Bilgi Eklemek
+laptopl.version = "10.15.7"
+console.log(laptop1)
+
+//Anahtar Bilgilerine Ulasmak (keys) -> Object, keys(item)
+keys = Object, keys(laptop1)
+console.log(keys)
+console.log(Object.keys(laptop1))
+keys, forEach(item => {
+    console.log(item)
+    console.log()
+})
