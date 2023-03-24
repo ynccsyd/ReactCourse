@@ -18,14 +18,25 @@ laptop1["brand"] = "Mac 1"
 console.log(laptop1)
 
 // Yeni Bilgi Eklemek
-laptopl.version = "10.15.7"
+laptop1.version = "10.15.7"
 console.log(laptop1)
 
-//Anahtar Bilgilerine Ulasmak (keys) -> Object, keys(item)
+//Anahtar Bilgilerine Ulasmak (keys) -> Object.keys(item)
 keys = Object, keys(laptop1)
 console.log(keys)
 console.log(Object.keys(laptop1))
-keys, forEach(item => {
-    console.log(item)
-    console.log()
+
+keys.forEach(keyInfo => {
+    console.log(keyInfo)
+    console.log(laptop1[keyInfo])
+})
+
+//Deger Bilgilerine Ulasmak (values) -> Object.values(item)
+console.log(
+    Object.values(laptop1)
+)
+let values = Object.values(laptop1)
+
+values.forEach(value => {
+    console. log("value: ", value)
 })
