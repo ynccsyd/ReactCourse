@@ -77,3 +77,20 @@ fetch("https://jsonplaceholder.typicode.com/todos")
             console.log(todo.title);//Başlıkları console' a yazdırma
         });
     })
+    .catch((err) => console.log(err))
+//Ve en sonunda catch() metoduyla herhangi bir aşamada hata oluşursa,
+// bu hatayı parametre olarak alıp console’a yazdırıyoruz.
+
+//
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch((error) => console.log("error:", error))
+
+//
+fetch("https://jsonplaceholder.typicode.com/comments")
+.then((response)=>response.json())
+.then((json)=>json.forEach((item) => {
+  console.log(item.email)
+}))
+.catch((err)=>console.log(err))
