@@ -1,15 +1,15 @@
 const users = [
-{
-name: "Mehmet",
-age: 18,
-},
-{
-name: "Murat",
-age: 30,
-},
-{
-name: "Sevilay",
-},
+    {
+        name: "Mehmet",
+        age: 18,
+    },
+    {
+        name: "Murat",
+        age: 30,
+    },
+    {
+        name: "Sevilay",
+    },
 ]
 /*
 push
@@ -23,7 +23,7 @@ includes
 // push
 users.push("Ayse");
 users.push("Fatma");
-console. log(users);
+console.log(users);
 // mар
 // users.map((item)
 // console.log(item.name);
