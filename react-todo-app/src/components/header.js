@@ -1,8 +1,9 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 const Header = () => {
     return (
-        <div>
+        <div className='todoapp'>
             <header class="header">
                 <h1>todos</h1>
                 <form>

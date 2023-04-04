@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from './header'
+
 
 const Todos = () => {
   return (
-    <div>Todos</div>
+    <section className='todoapp'>
+        <Header/>
+    </section>
   )
 }
 
