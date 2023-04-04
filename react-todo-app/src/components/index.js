@@ -1,13 +1,20 @@
 import React from 'react'
-import Header from './header'
+import Header from './Header'
+import List from "./List"
+import Footer from "./Footer"
 
 
 const Todos = () => {
-  return (
-    <section className='todoapp'>
-        <Header/>
-    </section>
-  )
+    return (
+        <div>
+            <section className='todoapp'>
+                <Header />
+                <List />
+            </section>
+            <Footer />
+        </div>
+
+    )
 }
 
 export default Todos
