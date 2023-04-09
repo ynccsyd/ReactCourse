@@ -15,7 +15,9 @@ const Users = () => {
          
     }, []);
 
-    /* axios ile json a çevirmeye gerek yok ve daha geniş bir browser desteği var */
+    /* axios 
+    Axios ile servis çağrımı yaptığımızdan JSON parse işlemi yapmamıza gerek yoktur.
+   ve daha geniş bir browser desteği var */
     // useEffect(() => {
     //     axios('https://jsonplaceholder.typicode.com/users')
     //         .then((res) => setUsers(res.data))
