@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// 👇️ import Routes instead of Switch 👇️
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import Home from "./components/Home"
+import About from "./components/About"
+import Users from "./components/Users"
+import User from "./components/User"
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+            <li>
+              <Link to="/user">User</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* 👇️ Wrap your Route components in a Routes component */}
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/user" element={<User/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+// function Home() {
+//   return <h2>Home</h2>;
+// }
+
+// function About() {
+//   return <h2>About</h2>;
+// }
+// function Users() {
+//   return <h2>Users</h2>;
+// }
+
