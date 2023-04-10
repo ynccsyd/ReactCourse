@@ -1,23 +1,33 @@
-import {useParams} from 'react-router-dom'
+import { useParams, Link} from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import axios from "axios"
 
 const User = () => {
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);
-    const {id}=useParams();
+  
+    const { id } = useParams();
     useEffect(() => {
         axios(`https://jsonplaceholder.typicode.com/users/${id}`)
-        .then((res)=>setUser(res.data) );
-    }, []);
-  return (
-    <div>
-        <h2>User Detail</h2>
-        {loading && <div>Loading</div> }
-        <code>{JSON.stringify(user)}</code>
-    </div>
+            .then((res) => setUser(res.data))
+            .finally(() => {
+                setLoading(false)
+            });
+    }, [id]);
+    return (
+        <div>
+            <h2>User Detail</h2>
+            {loading && <div>Loading</div>}
+            {!loading && <code>{JSON.stringify(user)}</code>}
+            <br />
+            <br />
+            <Link to={`/users/user/${parseInt(id) + 1}`} >
+                Next User ({parseInt(id) + 1})
+            </Link>
+          
+        </div>
 
-  )
+    )
 }
 
 export default User
