@@ -21,18 +21,16 @@ export default function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
-            <li>
-              <Link to="/user">User</Link>
-            </li>
+          
           </ul>
         </nav>
 
         {/* 👇️ Wrap your Route components in a Routes component */}
         <Routes>
           <Route path="/about" element={<About />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/user" element={<User/>} />
+          <Route path="/user/:id" element={<User/>} />
         </Routes>
       </div>
     </Router>
