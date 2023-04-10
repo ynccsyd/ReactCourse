@@ -6,20 +6,16 @@ import About from "./components/About"
 import Users from "./components/Users"
 import User from "./components/User"
 
-
-
 export default function App() {
   return (
     <Router>
-     
-        <Routes>
+      <Routes>
         <Route path='' element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='users/*' element={<Users />}>
-            <Route path='user/:id' element={<User />} />
-          </Route>
-        </Routes>
- 
+        <Route path='about' element={<About />} />
+        <Route path='users/*' element={<Users />}>
+          <Route path='user/:id' element={<User />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }
