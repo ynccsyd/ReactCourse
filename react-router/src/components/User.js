@@ -1,12 +1,12 @@
-import { useParams, Link} from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import axios from "axios"
 
 const User = () => {
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);
-  
     const { id } = useParams();
+    
     useEffect(() => {
         axios(`https://jsonplaceholder.typicode.com/users/${id}`)
             .then((res) => setUser(res.data))
@@ -24,7 +24,7 @@ const User = () => {
             <Link to={`/users/user/${parseInt(id) + 1}`} >
                 Next User ({parseInt(id) + 1})
             </Link>
-          
+
         </div>
 
     )

@@ -1,33 +1,31 @@
 import React from 'react';
 // 👇️ import Routes instead of Switch 👇️
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import Home from "./components/Home"
 import About from "./components/About"
 import Users from "./components/Users"
 import User from "./components/User"
+import Error404 from "./components/Error404"
+import Layout from './components/Layout';
+// import Footer from './components/Footer';
 
-export default function App() {
+function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path='' element={<Home />} />
-        <Route path='about' element={<About />} />
-        <Route path='users/*' element={<Users />}>
-          <Route path='user/:id' element={<User />} />
+        <Route path='/*' element={<Layout />}>
+          <Route path='' element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='users/*' element={<Users />}>
+            <Route path='user/:id' element={<User />} />
+          </Route>
+          <Route path='*' element={<Error404 />} />
         </Route>
       </Routes>
-    </Router>
+      {/* <Footer /> */}
+    </BrowserRouter>
   );
 }
+export default App;
 
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-// function About() {
-//   return <h2>About</h2>;
-// }
-// function Users() {
-//   return <h2>Users</h2>;
-// }
 

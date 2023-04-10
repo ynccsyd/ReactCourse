@@ -22,7 +22,7 @@ const Users = () => {
                 <ul>
                     {users.map((user) => (
                         <li key={user.id}>
-                            <NavLink to={`user/${user.id}`} >
+                            <NavLink activeClassName='active' to={`user/${user.id}`} >
                                 {user.name}
                             </NavLink>
                         </li>
