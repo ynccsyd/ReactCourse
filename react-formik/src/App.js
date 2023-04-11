@@ -1,87 +1,45 @@
 
-import { Formik, } from 'formik';
+import { BrowserRouter, Route, Routes, NavLink, } from 'react-router-dom';
 import './App.css';
+import FormikForm from './components/FormikForm';
+import UseFormik from "./components/UseFormik";
+import Validation1 from "./components/Validation_1"
+import Validation2 from "./components/Validation_2"
 
 function App() {
   return (
-    <div className="App">
-      <h1>Sign Up</h1>
-      <Formik
-        initialValues={{
-          firstName: '',
-          lastName: '',
-          email: '',
-          gender: "",
-          hobies: [],
-          country:"Türkiye"
-        }}
-        onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          console.log(JSON.stringify(values, null, 2));
-        }}
-      >
-        {({ handleSubmit, handleChange, values }) => (
-          <form onSubmit={handleSubmit} >
-            <label htmlFor="firstName">First Name</label>
-            <input onChange={handleChange} id="firstName" name="firstName" placeholder="Jane" />
-            <br />
-            <br />
-            <label htmlFor="lastName">Last Name</label>
-            <input onChange={handleChange} id="lastName" name="lastName" placeholder="Doe" />
-            <br />
-            <br />
-            <label htmlFor="email">Email</label>
-            <input onChange={handleChange}
-              id="email"
-              name="email"
-              placeholder="jane@acme.com"
-              type="email"
-            />
-            <br />
-            <br />
-            <span>Male</span>
-            <input
-              type='radio'
-              name='gender'
-              value="male"
-              checked={values.gender === "male"}
-              onChange={handleChange} />
-            <span>Female</span>
-            <input
-              type="radio"
-              name='gender'
-              value="female"
-              onChange={handleChange} />
-            <br />
-            <div>
-              <input type="checkbox" name="hobies" id="Hobies" onChange={handleChange} />
-              Football
-            </div>
-            <div>
-              <input type="checkbox" name="hobies" id="Cinema" onChange={handleChange} />
-              Cinema
-            </div>
-            <div>
-              <input type="checkbox" name="hobies" id="Photography" onChange={handleChange} />
-              Photography
-            </div>
-            <br />
-            <select name="country" id="country" onChange={handleChange}>
-              <option value="Türkiye">TR</option>
-              <option value="England">En</option>
-              <option value="USA">US</option>
-            </select>
-            <br />
-            <br />
-            <button type="submit">Submit</button>
-            <br />
-            <br />
-            {JSON.stringify(values)}
-          </form>
-        )}
-
-      </Formik>
-    </div>
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to='/formik'>
+              FormikForm
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/useFormik'>
+              useFormik
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/validation_1'>
+              FormValidation_1
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/validation_2'>
+              FormValidation_2
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path='/formik' element={<FormikForm />} />
+        <Route path='/useFormik' element={<UseFormik />} />
+        <Route path='/validation_1' element={<Validation1 />} />
+        <Route path='/validation_2' element={<Validation2 />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
