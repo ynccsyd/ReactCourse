@@ -10,7 +10,7 @@ const Users = () => {
 
     useEffect(() => {
         axios("https://jsonplaceholder.typicode.com/users")
-            .then(res => setUsers(res.data))
+            .then((res )=> setUsers(res.data))
             .catch((e) => console.log(e))
             .finally(() => setLoading(false));
     }, []);
