@@ -4,7 +4,6 @@ import './App.css';
 import FormikForm from './components/FormikForm';
 import UseFormik from "./components/UseFormik";
 import Validation1 from "./components/Validation_1/Validation_1"
-import Validation2 from "./components/Validation_2"
 
 function App() {
   return (
@@ -26,18 +25,13 @@ function App() {
               FormValidation_1
             </NavLink>
           </li>
-          <li>
-            <NavLink to='/validation_2'>
-              FormValidation_2
-            </NavLink>
-          </li>
+        
         </ul>
       </nav>
       <Routes>
         <Route path='/formik' element={<FormikForm />} />
         <Route path='/useFormik' element={<UseFormik />} />
         <Route path='/validation_1' element={<Validation1 />} />
-        <Route path='/validation_2' element={<Validation2 />} />
       </Routes>
     </BrowserRouter>
   );
