@@ -4,6 +4,7 @@ import './App.css';
 import ReactMemo from "./components/ReactMemo/ReactMemo"
 import ChangeState from './components/ReactMemo/ChangeState';
 import UseMemo from './components/UseMemo/UseMemo';
+import UseCallBack from "./components/UseCallBack/UseCallBack"
 
 function App() {
   return (
@@ -34,11 +35,20 @@ function App() {
           </li>
         </ul>
         <h1>UseCallBack</h1>
+        <ul>
+          <li>
+            <NavLink to='/useCallBack'
+              style={({ isActive }) => ({ color: isActive ? "blue" : "grey", })} >
+              UseCallBack
+            </NavLink>
+          </li>
+        </ul>
       </nav>
       <Routes>
         <Route path='reactMemo' element={<ReactMemo />} />
         <Route path="changeState" element={<ChangeState />} />
         <Route path="useMemo" element={<UseMemo />} />
+        <Route path="useCallBack" element={<UseCallBack/>} />
       </Routes>
     </BrowserRouter>
   );
