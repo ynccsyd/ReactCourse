@@ -1,12 +1,13 @@
 import React from 'react'
 import{useState} from "react"
-import Header from './Header';
+import Header from '../Header';
 
 const ReactMemo = () => {
     const [number, setNumber] = useState(0);
     return (
         <div className='App'>
         <Header/>
+        <hr />
             <h1>{number}</h1>
             <button onClick={() => setNumber(number + 1)}>İncrease</button>
         </div>

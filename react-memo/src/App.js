@@ -1,8 +1,8 @@
 
 import { BrowserRouter, Route, Routes, NavLink, } from 'react-router-dom';
 import './App.css';
-import ReactMemo from "./components/ReactMemo"
-import ChangeState from './components/ChangeState';
+import ReactMemo from "./components/ReactMemo/ReactMemo"
+import ChangeState from './components/ReactMemo/ChangeState';
 // import Validation1 from "./components/Validation_1/Validation_1"
 
 function App() {
