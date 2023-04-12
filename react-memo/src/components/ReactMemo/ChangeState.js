@@ -1,6 +1,6 @@
 import React from 'react'
 import{useState} from "react"
-import Header from '../HeaderState';
+import Header from './HeaderState';
 
 const ChangeState = () => {
   const [number, setNumber] = useState(0);
