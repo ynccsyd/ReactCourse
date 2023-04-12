@@ -1,9 +1,7 @@
 import React from 'react'
-import { useState } from "react"
-import Header from '../Header';
 
-const ReactMemo = () => {
-    const [number, setNumber] = useState(0);
+const UseMemo = () => {
+  const [number, setNumber] = useState(0);
     return (
         <div className='App'>
             <Header />
@@ -14,4 +12,4 @@ const ReactMemo = () => {
     )
 }
 
-export default ReactMemo 
+export default UseMemo
