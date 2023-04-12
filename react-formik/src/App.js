@@ -21,8 +21,8 @@ function App() {
             </NavLink>
           </li>
           <li>
-            <NavLink to='/validation_1'>
-              FormValidation_1
+            <NavLink to='/validations'>
+              FormValidation
             </NavLink>
           </li>
         
@@ -31,7 +31,7 @@ function App() {
       <Routes>
         <Route path='/formik' element={<FormikForm />} />
         <Route path='/useFormik' element={<UseFormik />} />
-        <Route path='/validation_1' element={<Validation1 />} />
+        <Route path='/validations' element={<Validation1 />} />
       </Routes>
     </BrowserRouter>
   );
