@@ -6,14 +6,14 @@ import Header from './Header';
 const UseCallBackSample = () => {
   const [number, setNumber] = useState(0);
   const [text, setText] = useState("");
-// const increment=useCallback(() => {
-//   setNumber(number+1)
-// },[number]); // it will be re-rendered with this
+
+/*const increment=useCallback(() => {
+  setNumber(number+1)
+},[number]); // it will be re-rendered with this*/
+
 const increment=useCallback(() => {
     setNumber((prevState)=>prevState+1);
-  },[]); // it will be re-rendered with this
-  
-
+  },[]); // it won't be re-rendered with this
 
     return (
       <div className='App'>
