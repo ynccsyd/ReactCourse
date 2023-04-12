@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, NavLink, } from 'react-router-dom';
 import './App.css';
 import FormikForm from './components/FormikForm';
 import UseFormik from "./components/UseFormik";
-import Validation1 from "./components/Validation_1"
+import Validation1 from "./components/Validation_1/Validation_1"
 import Validation2 from "./components/Validation_2"
 
 function App() {

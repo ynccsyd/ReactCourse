@@ -1,9 +1,13 @@
 import React from 'react'
+import SignUp from './SignUp';
 
 const Validation_1 = () => {
+ 
   return (
-    <div>Validation_1</div>
-  )
+    <div className='App'>
+      <SignUp/>
+    </div>
+  );
 }
 
 export default Validation_1

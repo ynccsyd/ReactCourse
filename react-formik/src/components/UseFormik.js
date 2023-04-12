@@ -2,44 +2,84 @@ import React from 'react';
 import { useFormik } from 'formik';
 
 const UseFormik = () => {
-  const formik = useFormik({
+  const { handleSubmit, handleChange, values } = useFormik({
     initialValues: {
       firstName: '',
       lastName: '',
       email: '',
+      gender: "male",
+      hobies: [],
+      country: "Türkiye"
     },
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
+      console.log(values)
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="firstName">First Name</label>
-      <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.firstName}
-      />
-      <label htmlFor="lastName">Last Name</label>
-      <input
-        id="lastName"
-        name="lastName"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.lastName}
-      />
-      <label htmlFor="email">Email Address</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div className='App'>
+      <h1>Sign Up</h1>
+      <form onSubmit={handleSubmit} >
+        <label htmlFor="firstName">First Name</label>
+        <input onChange={handleChange} id="firstName" name="firstName" placeholder="Jane" />
+        <br />
+        <br />
+        <label htmlFor="lastName">Last Name</label>
+        <input onChange={handleChange} id="lastName" name="lastName" placeholder="Doe" />
+        <br />
+        <br />
+        <label htmlFor="email">Email</label>
+        <input onChange={handleChange}
+          id="email"
+          name="email"
+          placeholder="jane@acme.com"
+          type="email"
+        />
+        <br />
+        <br />
+        <span>Male</span>
+        <input
+          type='radio'
+          name='gender'
+          value="male"
+          checked={values.gender === "male"}
+          onChange={handleChange} />
+        <span>Female</span>
+        <input
+          type="radio"
+          name='gender'
+          value="female"
+          onChange={handleChange} />
+        <br />
+        <div>
+          <input type="checkbox" name="hobies" id="Hobies" onChange={handleChange} />
+          Football
+        </div>
+        <div>
+          <input type="checkbox" name="hobies" id="Cinema" onChange={handleChange} />
+          Cinema
+        </div>
+        <div>
+          <input type="checkbox" name="hobies" id="Photography" onChange={handleChange} />
+          Photography
+        </div>
+        <br />
+        <select name="country" id="country" onChange={handleChange}>
+          <option value="Türkiye">TR</option>
+          <option value="England">En</option>
+          <option value="USA">US</option>
+        </select>
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+        <br />
+        <br />
+        {JSON.stringify(values)}
+      </form>
+
+
+
+    </div>
   );
 }
 
