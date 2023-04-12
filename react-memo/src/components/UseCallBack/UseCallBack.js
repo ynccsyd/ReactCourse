@@ -3,7 +3,7 @@ import { useState, useMemo } from "react"
 import Header from './Header';
 
 // const data={name:"Name"} // if you write out of function it will render once
-const UseMemoSample = () => {
+const UseCallBackSample = () => {
   const [number, setNumber] = useState(0);
   const [text, setText] = useState("");
   // const data=useMemo ( () => {  //header component will be rendered once
@@ -38,4 +38,4 @@ function calculateObject(){
 }
 
 
-export default UseMemoSample
+export default UseCallBackSample
