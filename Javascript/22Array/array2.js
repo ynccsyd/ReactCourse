@@ -30,3 +30,14 @@ var sports = ['basketball', 'football', 'tennis' ];
 console.log(sports); // basketball, football, tennis
 sports.splice(1,0,'baseball');
 console.log(sports); // basketball, baseball, football, tennis
+
+/** ARRAY BUILDER **/
+function arrayBuilder(one, two, three) {
+    var arr = [];
+    arr.push(one);
+    arr.push(two);
+    arr.push(three);
+    return arr;
+}
+var simpleArr = arrayBuilder('apple', 'pear', 'plum');
+console.log(simpleArr); // ['apple','pear','plum']
