@@ -20,3 +20,4 @@ function addTwoNums(a,b) {
 }
 addTwoNums(5, "5")
 console.log("It still works")
+
