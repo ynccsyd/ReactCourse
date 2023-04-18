@@ -1,11 +1,10 @@
 import Button from "./Button"
 import Header from './Header';
 import Profile from "./Profile"
-import { useContext } from 'react';
-import ThemeContext from "../context/ThemeContext"
+import {useTheme} from "../context/ThemeContext"
 
 const Container = () => {
-    const {theme}=useContext(ThemeContext);
+    const {theme}=useTheme();
     return (
         <div className={`app ${theme}`}>
             <Header />
