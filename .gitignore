@@ -4,3 +4,81 @@
 # npm init react-app firstapp
 # Context: global state yönetimi
 
+muhibbi_10_@hotmail.com
+Aşağıda ekrana çıktı veren bir kod bulunmaktadır. Ekrana kaç defa bastırma işlemi yapılmaktadır?
+
+
+
+BAŞLA
+
+SAY = 32
+
+SAY == 1 ise 7. adıma git
+
+SAY’ı ekrana bastır
+
+SAY = SAY / 2
+
+3. adıma git
+
+BİTİR
+
+Bu kod, başlangıçta SAY değişkenine 32 değerini atar ve her döngüde SAY değerini ekrana bastırdıktan sonra 2'ye böler. Döngü SAY 1'e eşit olana kadar devam eder.
+
+32, 16, 8, 4, 2, 1
+
+Döngü 6 kez döndüğünden dolayı ekrana 6 kez bastırma işlemi yapılmaktadır.
+
+
+
+
+muhibbi_10_@hotmail.com
+Aşağıdaki kod parçası çalıştırıldığında ekranda 7 cevabını görmek isteyen birisi programa başta hangi sayı ile giriş yapmalıdır?
+
+
+
+BAŞLA
+
+SAY1 OKU
+
+SAY2= 1 , SAY3= 2
+
+SAY1==SAY3 ise 8.adıma git
+
+SAY2== SAY2 + 1
+
+SAY3== SAY3 * 2
+
+4.Adıma git
+
+SAY1'i ekrana bastır
+
+BİTİR
+Bu kod, SAY1'in 2'nin üssü olan bir sayı olup olmadığını kontrol eder. Döngü, SAY1'in 2'nin üssü olan bir sayı olduğunda sona erer ve SAY1'i ekrana bastırır.
+
+7, 2'nin üssü olan bir sayıdır (2^2 + 2^1 + 2^0 = 4 + 2 + 1 = 7). Bu nedenle, başlangıçta SAY1 olarak 7 girilmelidir.
+
+muhibbi_10_@hotmail.com
+Have the function PalindromeTwo(str) take the str parameter being passed and return the string true if the parameter is a palindrome, (the string is the same forward as it is backward) otherwise return the string false. The parameter entered may have punctuation and symbols but they should not affect whether the string is in fact a palindrome. For example: "Anne, I vote more cars race Rome-to-Vienna" should return true. write in java
+
+import java.util.*; 
+import java.io.*;
+
+class Main {
+  public static String PalindromeTwo(String str) {
+  String cleanStr = str.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+   // check
+  for (int i = 0; i < cleanStr.length() / 2; i++) {
+      if (cleanStr.charAt(i) != cleanStr.charAt(cleanStr.length() - i - 1)) {
+        return "false";
+      }
+    }
+    
+    return "true";
+  }
+
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.print(PalindromeTwo(s.nextLine()));
+  }
+}
