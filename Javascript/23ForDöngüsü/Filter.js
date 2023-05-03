@@ -48,3 +48,8 @@ console.log(buyukotuz)
 const jsbilen=persons.filter(person=>person.languages=="JavaScript")
 console.log(jsbilen)
 
+/** */
+const nums = [0,10,20,30,40,50];
+nums.filter( function(num) {
+    return num > 20;
+}) //output: [30,40,50]
