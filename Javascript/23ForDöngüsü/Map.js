@@ -72,3 +72,8 @@ const yeniMaaslar = maaslar.map((e)=>{
 });
 
 console.log( yeniMaaslar ); //[1210, 13650, 2750, 4725, 1650.0000000000002, 26250, 2200]
+
+/** */
+[0,10,20,30,40,50].map( function(num) {
+    return num / 10
+}) //Output: [0,1,2,3,4,5]
