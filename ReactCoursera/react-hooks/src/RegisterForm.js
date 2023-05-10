@@ -20,7 +20,7 @@ export default function RegisterForm() {
                         });
                     }}
                 />
-            </label>
+            </label> <br />
             <label>
                 Last name:
                 <input
@@ -32,7 +32,7 @@ export default function RegisterForm() {
                         });
                     }}
                 />
-            </label>
+            </label><br />
             <label>
                 Email:
                 <input
