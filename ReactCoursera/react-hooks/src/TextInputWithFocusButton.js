@@ -9,13 +9,18 @@ const TextInputWithFocusButton = () => {
     const inputEl=useRef(null);
     const onButtonClick = () => {
      inputEl.current.focus();
+     console.log(inputEl) 
     }
+    console.log(inputEl)
   return (
     <div>
         <input type="text" ref={inputEl} />
-        <button onClick={onButtonClick}>Focus the input</button>
+        <button onClick={onButtonClick}>Focus the input</button> 
     </div>
   )
 }
 
 export default TextInputWithFocusButton
+// write a name and click button output:
+// current: input
+// value: "myname"
