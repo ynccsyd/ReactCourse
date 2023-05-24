@@ -43,15 +43,15 @@
   .page-sidebar {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    background: #e1bee7;
+    background: #9229a5;
   }
   .page-nav {
     grid-column: 2 / 3;
-    background: #bbdefb;
+    background: #588bb4;
   }
   .page-main {
     grid-column: 2 / 3;
-    background: #dcedc8;
+    background: #b8d39a;
   }
   .page-footer {
     grid-column: 1 / -1;
