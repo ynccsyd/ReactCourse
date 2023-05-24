@@ -1,0 +1,62 @@
+
+/* Add code for container class below */
+.container {
+    /* Add rules here */
+    display: grid;
+    max-width: 900px;
+    min-height: 50vh;
+    grid-template-columns: 100%;/*sütunlar genişliğin %100'ünü kaplayacak*/
+    grid-template-rows: auto auto 1fr auto auto; /*Ortadakinin 1 kesirli alan değerine sahip olacağı ve geri kalanının otomatik olarak ayarlanacağı beş satır */
+    grid-template-areas: "header" "left" "main" "right" "footer";/*5 değer içeren bir kılavuz şablon alanı oluşturacaksınız: header, left, main, right and footer.*/
+  
+}
+/* Add media rules for container class below */
+@media (min-width: 440px) {
+    .container {
+    /* Add rules here */
+    display: grid;
+      grid-template-columns: 150px 1fr 150px;/* 3 sütunu sırasıyla 150 piksel, 1 kesirli alan ve yine 150 piksel değerlerine sahip*/
+      grid-template-rows: auto 1fr auto;/* 3 satırı için ortadaki değer 1 kesirli olmalı, diğer ikisi otomatik olarak ayarlanacaktır*/
+      grid-template-areas:  "header header header" 
+                          "left main right" 
+					                "footer footer footer";
+    }/* ilk satırda sadece başlık olacak 3 x 3 ızgara şablon alanı oluşturacaksınız. 
+    2. satırda left , main ve right olacak ve son olarak son satırda yalnızca footer olacak.*/
+}
+
+
+/* Properties for other selectors */
+.header {
+    grid-area: header;
+    padding: 10px;
+    background-color:black;
+    color: #fff;
+    text-align: center;
+}
+  
+.main {
+    grid-area: main;
+    padding: 25px;
+}
+  
+.left {
+    grid-area: left;
+    background-color: peachpuff;
+  }
+  
+.right {
+    grid-area: right;
+  }
+  
+.footer {
+    grid-area: footer;
+    padding: 10px;
+    background-color:black;
+    color: #fff;
+    text-align: center;
+  }
+  
+.sidebar {
+    padding: 25px;
+    background-color:darkcyan;
+  }
