@@ -95,7 +95,46 @@ nav ul li a {
 
 main {
     margin: 6rem;
+    margin-top: 0;
 }
+.container {
+    display: flex;
+    align-items: center;
+  }i
+  
+  .image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  .rlemon2{
+    margin-left: 11rem;
+    width: 40%;
+  }
+  
+  .restaurant-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #03492e;
+    background-color:transparent;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .container:hover .image-container {
+    transform: scale(1.1);
+  }
+  
+  .container:hover .restaurant-description {
+    opacity: 0.5;
+  }
+  
 
 .meals {
     display: flex;
