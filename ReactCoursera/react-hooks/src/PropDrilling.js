@@ -28,7 +28,7 @@ function Main(props) {
       </div> 
     ); 
   };
-  
+  // APP
   function App() { 
     return ( 
       <Main  

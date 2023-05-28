@@ -6,7 +6,6 @@ export default function RegisterForm() {
         lastName: 'Jones',
         email: 'lukeJones@sculpture.com',
     });
-
     return (
         <>
             <label>
