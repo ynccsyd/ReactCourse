@@ -1,4 +1,4 @@
-import './App.css';
+import './App1.css';
 import { useState } from "react";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     console.log("Form submitted!")
   }
   return (
-    <div className="App">
+    <div className="App1">
 
       <form onSubmit={handleSubmit}>
         <fieldset>

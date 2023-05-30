@@ -15,7 +15,7 @@ const FormCONTROL = () => {
         setScore("10")
     }
     return (
-        <div className="App">
+        <div className="App1">
             <form onSubmit={handleSubmit} >
                 <fieldset>
                     <h2>Feedback Form</h2>
