@@ -1,5 +1,5 @@
 import {createContext, useState, useContext} from "react";
-const UserContext=createContext(undefined)
+const UserContext=createContext(undefined);
 
 export const UserProvider=({children})=>{
     const [user]=useState({
