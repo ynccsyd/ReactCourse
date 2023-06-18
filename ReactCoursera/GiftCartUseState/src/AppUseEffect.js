@@ -10,6 +10,7 @@ export default function App(){
   }, [toggle])
   return(
     <div>
+      <hr />
       <h1>Using the useEffect hook</h1>
       <button onClick={clickHandler}>
         Toggle Message
