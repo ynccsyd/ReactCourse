@@ -3,14 +3,14 @@ import React, {useState} from 'react'
 
 const FetchingDataWithHook = () => {
     const [petName, setPetName] = useState("Fluffy");
-    console.log(setPetName)
+    console.log(petName)
     function nameLooper(){
         if(petName==="Fluffy"){
-            setPetName("Rexy")
+           useState("Rexy")
         }else if(petName==="Rexy"){
-            setPetName("Gizmo")
+            useState("Gizmo")
         }else if(petName==="Gizmo"){
-            setPetName("Fluffy")
+            useState("Fluffy")
         }
     }
   return (
