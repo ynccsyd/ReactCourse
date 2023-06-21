@@ -2,6 +2,7 @@ import React from "react";
 import GiftCartUsestate from "./GiftCartUsestate"
 import AppUseEffect from "./AppUseEffect"
 import FetchingDataWithHook from "./FetchingDataWithHook";
+import DataFetchHook from "./DataFetchHook"
 
 export default function App() {
 
@@ -11,6 +12,7 @@ export default function App() {
      <GiftCartUsestate/>
      <AppUseEffect/>
      <FetchingDataWithHook/>
+     <DataFetchHook/>
     </div>
   );
 }
