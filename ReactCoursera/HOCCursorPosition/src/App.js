@@ -27,7 +27,7 @@ const PanelMouseLogger=({mousePosition})=>{
     return null;
   }
   return(
-    <div>
+    <div className='BasicTracker'> 
       <p>Mouse position: </p>
       <div className="Row"> 
         <span>x: {mousePosition.x}</span>
@@ -54,7 +54,7 @@ const PointMouseTracker=withMousePosition(PointMouseLogger);
 function App() {
   return (
     <div className="App">
-      <header>Little Lemon Restaurant</header>
+      <header className='Header'>Little Lemon Restaurant</header>
       <PanelMouseTracker/>
       <PointMouseTracker/>
     </div>
