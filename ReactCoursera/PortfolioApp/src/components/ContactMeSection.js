@@ -41,11 +41,22 @@ const LandingSection = () => {
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required("Required"),
-      email: Yup.string().email("Invalid email address.").required("Required"),
+      email: Yup.string()
+        .email("Invalid email address.")
+        .required("Required"),
       comment: Yup.string().required("Required").min(25, "Must be at least 25 characters"),
     }),
   });
-
+  useEffect(() => {
+    if (response) {
+      if (response.type === "success") {
+        onOpen(response.message); // Display success alert with the message
+        formik.resetForm(); // Reset the form
+      } else if (response.type === "error") {
+        onOpen(response.message); // Display error alert with the message
+      }
+    }
+  }, [response]);
   return (
     <FullScreenSection
       isDarkBackground
@@ -60,13 +71,13 @@ const LandingSection = () => {
         <Box p={6} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
-              <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
+              <FormControl 
+                isInvalid={formik.touched.firstName && formik.errors.firstName}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
-                  value={formik.values.firstName}
-                  onChange={formik.handleChange}
+                  {...formik.getFieldProps("firsName")}
                 />
                 <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
               </FormControl>
@@ -76,8 +87,7 @@ const LandingSection = () => {
                   id="email"
                   name="email"
                   type="email"
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
+                  {...formik.getFieldProps("email")}
                 />
                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
@@ -86,8 +96,7 @@ const LandingSection = () => {
                 <Select
                   id="type"
                   name="type"
-                  value={formik.values.type}
-                  onChange={formik.handleChange}
+                  {...formik.getFieldProps("type")}
                 >
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
@@ -102,17 +111,16 @@ const LandingSection = () => {
                   id="comment"
                   name="comment"
                   height={250}
-                  value={formik.values.comment}
-                  onChange={formik.handleChange}
+                  {...formik.getFieldProps("comment")}
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button
-                type="submit"
-                colorScheme="purple"
+              <Button 
+                type="submit" 
+                colorScheme="purple" 
                 width="full"
                 isLoading={isLoading}
-              >
+                >
                 Submit
               </Button>
             </VStack>
