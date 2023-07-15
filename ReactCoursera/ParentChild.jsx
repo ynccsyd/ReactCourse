@@ -21,3 +21,6 @@ function Bowl(props) {
         </span>
     );
 };
+
+
+
